@@ -1,0 +1,400 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.nav-section {
+    position: absolute;
+    top: 30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-70%);
+    display: flex;
+    width: 30%;
+    padding: 15px 50px;
+    justify-content: space-between;
+    align-items: center;
+    /* Glassy effect */
+    /* background-color: rgba(47, 45, 46, 0.3);  */
+    backdrop-filter: blur(1px); /* blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 3px;
+    z-index: 10;
+
+}
+
+.logo-text{
+    color: #835F41;
+    text-transform: capitalize;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 22px;
+}
+.nav-option{
+    color: #a9a9a9;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 0;
+    font-size: 13px;
+}
+
+/* top-section */
+.top-section {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;        /* <-- Vertically center children */
+  height: 100vh;   
+   position: relative;       /* <-- Optional: Fill the full viewport height */
+}
+.top-right-section {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  margin-left: auto; /* This pushes it to the right inside the parent */
+}
+.top-right-section.b {
+  display: flex;
+  display: none;
+  width: 50%;
+  align-items: center;
+  margin-left: auto; /* This pushes it to the right inside the parent */
+}
+.top-right-section-left-grid{
+  width: 90%;
+}
+.top-right-section-right-grid{
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.top-img{
+  width: 100%;
+  height: auto;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+.text-section {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+  justify-content: center;
+ 
+}
+.text-section::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 150px; 
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: #AF7345;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 1;         /* ✅ Set to 1 (fully visible) */
+  z-index: -1;        /* ✅ Place behind .text-section content, but above background */
+  pointer-events: none; /* ✅ Just in case to avoid interaction issues */
+}
+
+
+.mini-head{
+  margin: 0;
+  color: #fff;
+  font-size: 26px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+}
+.head {
+  margin: 0;
+  color: #fff;
+  font-size: 180px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  line-height: 1;
+  display: block;
+}
+
+
+.para{
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+    font-weight: 400;
+    width: 75%;
+    line-height: 1.3rem;
+}
+.arrow-btn-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 75%;
+  margin-top: 30px;
+}
+/* .readmore {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+.arrow {
+  width: 80px;
+  height: 40px;
+  display: block;
+  stroke: #fff;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+.line-head {
+  color: #cecece;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+ border-bottom: 0.5px solid #cecece;
+  padding-bottom: 15px; /* ← This sets the gap between text and underline */
+  display: inline-block;
+}
+
+
+/* .readmore {
+  margin: 0;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to right, #9B6E47 0%, #9B6E47 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-size 0.4s ease-in-out, color 0.4s ease-in-out;
+  width: 15%;
+  text-align: center;
+}  */
+
+/* Hover effect */
+.readmore:hover {
+  background-size: 100% 100%; /* Fill from left to right */
+  color: #fff; /* Optional: keeps text color white */
+}
+.readmore:hover .arrow {
+  transform: translateX(5px);
+}
+.logo-icon{
+    width: 90px;
+    height: auto;
+}
+
+
+
+
+
+.topbar-section{
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+padding: 15px 0px;
+width: 90%;
+margin: 0 auto;
+display: none;
+}
+.menu{
+  width: 15px;
+  height: 15px;
+}
+.logo-text.b{
+    text-align: left;
+    font-weight: 400;
+    font-size: 15px;
+}
+.sidebar {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar.open {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+.topbar-section{
+display: flex;
+}
+ .top-right-section-right-grid.b {
+  display: flex;
+  gap: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body{
+    overflow: auto;
+}
+  /* Make nav full width and stack nav items vertically or adjust spacing */
+  .nav-section {
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+   
+    padding: 10px 20px;
+    gap: 10px;
+    justify-content: center;
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-option {
+    font-size: 14px;
+  }
+
+  /* Stack top-section vertically */
+ .top-section {
+    flex-direction: column;
+    height: auto; /* ✅ Already good — lets it grow naturally */
+    padding-top: 20px;
+  }
+  .text-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px;
+  }
+
+  .text-section::before {
+    width: 100px;
+    height: 100px;
+    filter: blur(40px);
+    top: 10%;
+  left: 50%;
+  }
+  .arrow-btn-section {
+  align-items: center;
+  width: 100%;
+}
+
+  .mini-head {
+    font-size: 32px;
+  }
+
+  .head {
+    font-size: 80px;
+    line-height: 1;
+  }
+
+  .para {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .readmore {
+    width: auto;
+    justify-content: center;
+  }
+  .arrow {
+  width: 50px;
+  height: 30px;
+  stroke: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+  .top-right-section {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px 0;
+    align-items: center;
+    display: none;
+  }
+   .top-right-section.b {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px 0;
+    align-items: center;
+    display: inline;
+  }
+
+
+  .top-right-section-left-grid,
+  .top-right-section-right-grid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .top-right-section-right-grid {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+  }
+
+  .top-img {
+    width: auto;
+    height: 400px;
+  }
+}

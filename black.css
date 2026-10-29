@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: sans-serif;
+    height: 100vh; /* Use viewport height */
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.main-body-section {
+    width: 75%;
+    display: flex;
+    gap: 50px;
+}
+
+.main-body-section-left {
+    width: 35%;
+}
+
+.main-body-section-mid {
+    width: 55%;
+    display: flex;
+    align-items: center;    
+    justify-content: center;    
+}
+.main-body-section-right {
+    width: 10%;
+    display: flex;
+    align-items: flex-end;     /* Align horizontally if needed */
+    justify-content: flex-end; /* Push vertical-label to the bottom */
+padding-bottom: 40px;
+}
+.main-img {
+    height: auto;
+    width: 100%;
+}
+.text-cntainer{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.container-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.head{
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 2rem;
+}
+.publish{
+    margin: 0;
+    font-size: 14px;
+    color: #A9A9A9;
+}
+.paragraph{
+     margin: 0;
+    font-size: 16px;
+    color: #A9A9A9;
+    text-align: justify;
+    word-spacing: -0.1em;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+      flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.custom-button {
+    position: relative; /* Needed for absolute positioning inside */
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: visible; /* Allow content to overflow */
+}
+
+.left-line {
+    position: absolute;
+    left: -16px; /* Push it outside the button */
+    height: 1px;
+    width: 25px;
+    background-color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-text {
+    position: relative; /* To sit above the line if needed */
+    z-index: 1;
+    color: #A9A9A9;
+    font-weight: 400;
+}
+
+.faded-text {
+    color: #ccc;
+    font-size: 14px;
+    cursor: default;
+}
+.icon-section{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.bottom-icon{
+    height: 15px;
+    width: 15px;
+}
+.vertical-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.vertical-line {
+    width: 0.5px;
+    height: 100px;
+    background-color: #ccc; /* light gray */
+}
+
+.vertical-text {
+    writing-mode: vertical-rl; /* vertical text from top to bottom */
+    transform: rotate(180deg); /* flips it to match the image */
+    color: #ccc;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
